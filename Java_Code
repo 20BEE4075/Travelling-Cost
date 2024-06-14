@@ -1,0 +1,73 @@
+/******************************************************************************
+For hiring a car,a travel agency chargesR1 rupees per hour for the first N hours and
+then R2 rupees per hour. Given the total time of travel in minutes is X. The task is to
+find the total traveling cost in rupees.
+Note: While converting minutes into hours, ceiling value should be considered as the
+total number of hours.
+For example:If the total travelling time is 90 minutes,
+i.e.1.5hours,it must be considered as 2 hours.
+
+Input Outp ut
+
+EXplanation
+Total travelling hours=
+20---Valueof R1 300/60=5hours
+4---ValueofNin
+hours40---Valueof
+
+120
+
+Rupees20/hoursforfirst4
+hours
+=20*4=80rupees
+R2 Rupees40/hoursin5th
+
+hour = 40
+
+300---ValueofXin
+minutes
+
+*1=40rupees
+Hence,thetotaltravelling
+cost=80+40=120
+rupees
+Totaltravellinghours=
+500/60=8.33,Ceiling
+30---ValueofR1 valueof8.33=9hours
+5---ValueofNinhours.
+
+290 Rupees30/hoursforfirst
+5thhours = 30 * 5 = 150
+
+35---ValueofR2 rupees
+500--ValueofXinminutes Rupees35/hoursin5th
+
+hour = 35
+*4=140rupees
+Hence,thetotaltravelling
+cost=150+140=290
+rupees
+*******************************************************************************/
+
+
+
+import java.util.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int r1 = sc.nextInt();
+		int n = sc.nextInt();
+		int r2 = sc.nextInt();
+		int k = sc.nextInt();
+		int focus,hr;
+		hr=(k+59)/60;
+		if(hr>n)
+		focus=n*r1+(hr-n)*r2;
+		else
+		focus=n*r1;
+		System.out.println(focus);
+	}
+}
